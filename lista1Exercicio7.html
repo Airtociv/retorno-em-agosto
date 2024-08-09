@@ -7,13 +7,14 @@
 </head>
 <body>
     <script>
-        let numero=parseInt(prompt("digite um numero"))
-        let fator=1
+        let numero = 0
 
-        for(let c = 1;c <= numero; c++){
-            fator = fator*c;
+    for(numero = 0; numero <= 100; numero++){
+        if(numero % 3 == 0 || numero % 5 == 0){
+            console.log(numero)
         }
-        console.log("o calculo tem resultado " + fator)
+        
+    }
     </script>
 </body>
 </html>
