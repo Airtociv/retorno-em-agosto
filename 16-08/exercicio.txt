@@ -1,0 +1,2 @@
+Criar um sistema para gerenciar produtos em uma loja, onde cada produto pode ser um tipo específico, como eletrônicos ou roupas. 
+Vamos utilizar três classes: Produto, Eletronico, e Roupas.

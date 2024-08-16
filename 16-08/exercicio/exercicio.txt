@@ -1,0 +1,1 @@
+criar um sistema para gerenciar produtos em uma loja, onde cada produto pode ser um tipo especifico, como eletrônicos ou roupas
