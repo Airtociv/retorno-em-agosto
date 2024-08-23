@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function lerArquivoCSV(arquivo,callback){
+            const leitor = new FileReader();
+
+            leitor.onload = function(evento){
+                const conteudo = evento.target.result;
+                callback(conteudo);
+            }
+            leitor.readAsText(arquivo)
+        }
+
+        const inputArquivo = document.getElementById('arquivoCSV')
+        inputArquivo.addEventListener('change',function(evento){
+            const arquivo = evento.target.files[0];
+            lerArquivoCSV(arquivo,function(conteudo){
+                function converterCSVparaArray(conteudoCSV){
+                    const linhas = conteudoCSV.split("\n");
+                    const arrayCSV = [];
+
+                    linhas.forEach(function(linha){
+                        const valores = linha.split(',');
+                        arrayCSV.push(valores);
+                    });
+                    return arrayCSV;
+                }
+            })
+        })
+        arrayCSV.forEach(function(linha){
+            console.log(linha);
+        });
+    </script>
+</head>
+<body>
+    <Form>
+        <label>selecione o arquivo</label>
+        <input type="file" id="arquivoCSV"><br>
+        <input type="submit" onclick="lerArquivoCSV()">
+    </Form>
+</body>
+</html>

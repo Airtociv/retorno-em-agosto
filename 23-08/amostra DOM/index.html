@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amostra DOM</title>
+    <script>
+        function testandoArvoreDOM() {
+            var element = document.documentElement.lastChild
+
+            alert("aqui fica o LastChild: " + element.nodeName)
+
+
+            var outroElemento = document.getElementsByTagName('h1')[0]
+
+            alert("aqui fica o primeiro titulo: " + outroElemento.textContent)
+
+            var filho = outroElemento.firstChild
+
+            alert("aqui fica o firstChild: " + filho.nodeValue)
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Titulo Improvisado</h1>
+    <p>
+        Como está indo o seu aprendizado?
+        <a href="https://es.senaiead.senai.br">disciplinas EAD</a>
+    </p>
+    <span onclick="testandoArvoreDOM();">clique para testar</span>
+</body>
+</html>
