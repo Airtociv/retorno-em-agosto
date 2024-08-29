@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+    <p>Class mauris eget fusce potenti ornare</p>
+    <p>Facilisis metus iaculis sagittis quis himenaeos aliquam urna fringilla.</p>
+    <script>
+        const paragrafos = document.getElementsByTagName("p")
+        Array.from(paragrafos).forEach(Element=>{
+            Element.textContent = "Paragrafo modificado via JavaScript"
+        })
+    </script>
+</body>
+</html>

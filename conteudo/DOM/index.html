@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvore DOM</title>
+    <script>
+        function testandoArvoreDOM(){
+            //document: representa o documento principal
+            //documentElement: captura o elemento raiz <html>
+            //lastChild(): retorna o último elemento filho (node)
+            var element = document.documentElement.lastChild;
+            //nodeName pega o nome do nó
+            alert("Eu sou o node lastChild: "+ element.nodeName);
+
+            //getElementsByTagName: pega o elemento que tem a tag com aquele nome, nesse caso h1
+            var outroElemento = document.getElementsByTagName('h1')[0];
+            //nodeName pega o nome do nó
+            alert("Eu sou o primeiro node h1: "+ outroElemento.textContent);
+
+            //FirstChild(): retorna o primeiro elemento filho (node)
+            var filho = outroElemento.firstChild;
+            //nodeName pega o nome do nó
+            alert("Eu sou o node firstChild: "+ filho.nodeValue);
+        }
+    </script>
+</head>
+<body>
+   <h1>Teste de Título</h1>
+    <p>
+        Você está aprendendo a utilizar árvores em DOM?
+        <a href="www.google.com">GOOGLE</a>
+    </p>
+    <span onclick="testandoArvoreDOM();"> Clique aqui para testar</span>
+    
+
+</body>
+</html>
