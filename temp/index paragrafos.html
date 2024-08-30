@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>faucibus malesuada</p>
+    <p>fermentum accumsan</p>
+    <p>aliquet tincidunt</p>
+
+    <script>
+        let textos = document.getElementsByTagName('p');
+        Array.from(textos).forEach(Element=>{
+            Element.textContent = "Parágrafo alterado pelo JS"
+        })
+    </script>
+
+</body>
+</html>

@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+    <ul id="lista">
+        <li>velho 58691</li>
+        <li>velho 46598</li>
+        <li>velho 784596</li>
     </ul>
     <button onclick="insert()">inserir</button>
     <button onclick="remove()">remover</button>
@@ -18,13 +18,13 @@
         function insert(){
             const element = document.createElement("li")
             element.textContent = "novo elemento"
-            const lista = document.getElementsByName("ul")
+            const lista = document.getElementsByTagName('ul')
             lista[0].appendChild(element)
         }
         function remove(){
-            const lista = document.createElement("ul")
-            const ultimoItem = lista[0].lastChild()
-            lista.removeChild
+            const lista = document.getElementById('lista')
+            const ultimoItem = lista.lastElementChild;
+            lista.removeChild(ultimoItem);
         }
     </script>
 </body>

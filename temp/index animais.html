@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+           constructor(tamanho, cor){
+            this.tamanho = tamanho;
+            this.cor = cor;
+           } 
+           comer(){
+            console.log("animais precisam comer")
+           }
+        }
+
+        class Cavalo extends Animal{
+            constructor(tamanho,cor,raca){
+                super(tamanho,cor);  
+                this.raca = raca;
+            }
+            fugir(){
+                console.log("o cavalo foge a galope")
+            }
+        }
+
+        class Leao extends Animal{
+            constructor(tamanho,cor,juba){
+                super(tamanho,cor);
+                this.juba = juba;
+            }
+            cacar(){
+                console.log("o leão caça sorrateiramente")
+            }
+        }
+    </script>
+    
+    
+
+</body>
+</html>
